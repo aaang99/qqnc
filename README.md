@@ -79,8 +79,8 @@ docker compose down
 #### 运行命令
 
 ```bash
-git clone https://github.com/aaang99/qq-farm-bot-404.git
-cd qq-farm-bot-404
+git clone https://github.com/aaang99/qqnc.git
+cd qqnc
 
 # 启用 corepack 并安装依赖
 corepack enable
