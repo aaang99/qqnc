@@ -13,7 +13,7 @@ coverage/
 .vite/
 .turbo/
 
-core/data/
+core/data/*
 core/docs/
 logs/
 log/
@@ -30,5 +30,18 @@ temp/
 # 配置合并脚本产生的备份
 *.bak
 
-# 持久化数据目录
-data/
+# 持久化数据目录（忽略实际数据，仅保留目录结构）
+data/*
+!data/.gitkeep
+!data/napcat/
+data/napcat/*
+!data/napcat/auth/
+!data/napcat/config/
+!data/napcat/QQ/
+data/napcat/auth/*
+!data/napcat/auth/.gitkeep
+data/napcat/config/*
+!data/napcat/config/.gitkeep
+data/napcat/QQ/*
+!data/napcat/QQ/.gitkeep
+

@@ -29,12 +29,21 @@
 ### 方式 A：Docker Compose 部署（推荐）
 
 ```bash
-git clone https://github.com/aaang99/qq-farm-bot-404.git
-cd qq-farm-bot-404
+git clone https://github.com/aaang99/qqnc.git
+cd qqnc
 
-# 构建并启动容器
+# 1. 准备环境变量（可选，不改也能启动）
+cp .env.compose.example .env
+
+# 2. 数据目录已随仓库提供占位，克隆后自动存在，无需手动创建
+#    如需自定义路径，可在 .env 中调整挂载
+
+# 3. 构建并启动容器
 docker compose up -d --build
 ```
+
+> 首次构建会下载基础镜像与依赖，耗时约 5～15 分钟，取决于网络状况。
+> 如需启用 QQ 扫码登录（NapCat），确保 `.env` 中 `COMPOSE_PROFILES=napcat`。
 
 #### 服务管理与日志
 
